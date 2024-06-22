@@ -1,0 +1,265 @@
+/* styles.css */
+
+/* 加入全頁面背景圖：https://www.kmb.hk/images/info/experience/facilities/light2.jpg */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+}
+
+.searchRoute {
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.KMBlogo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-section button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-section button:hover {
+    background-color: #cc0000;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+.busStopFather {
+    display: none;
+    justify-content: center;
+    height: 75vh;
+}
+
+.route {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.route h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.route p {
+    margin: 5px 0;
+}
+
+.busStop {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.hiddenBusStop {
+    display: none;
+}
+
+.hiddenResults {
+    display: none;
+}
+
+.backButton {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+}
+
+.back {
+    width: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.station-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.station-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.station-list li:last-child {
+    border-bottom: none;
+}
+
+.station-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.station-list li.highlight {
+    background-color: #ffe6e6;
+}
+
+.station-list li.highlight .number {
+    background-color: #cc0000;
+}
+
+.station-list li .number {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background-color: #ff6666;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.loading {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #db3434; /* red */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.searchSection {
+    display: block;
+}
+
+.searchSectionHidden {
+    display: none;
+}
+
+.hidden-popup-container {
+    display: none;
+}
+
+.popup-container {
+    width: 300px;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+}
+.popup-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.popup-time-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+.popup-time-item:last-child {
+    border-bottom: none;
+}
+.popup-time {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+.popup-time i {
+    margin-right: 8px;
+}
+.popup-status {
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+.popup-status.real-time {
+    background-color: #ff4d4f;
+    color: white;
+}
+.popup-status.scheduled {
+    background-color: #52c41a;
+    color: white;
+}
+.popup-icon-red {
+    color: red;
+}
+.popup-icon-grey {
+    color: grey;
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+.popup-close:hover {
+    color: #333;
+}
